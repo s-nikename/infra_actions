@@ -73,6 +73,6 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            sudo docker pull snikename/infra_actions
-            sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 snikename/infra_actions
+                  sudo docker pull snikename/infra_actions:v1
+                  sudo docker stop $(sudo docker ps -a -q)
+                  sudo docker run --rm -d -p 5000:5000 snikename/infra_actions:v1
